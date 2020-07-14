@@ -45,7 +45,7 @@ class Node3D {
   float getC() const { return g + h; }
   /// get the index of the node in the 3D array
   int getIdx() const { return idx; }
-  /// get the number associated with the motion primitive of the node
+  /// get the number associated with the motion primitive of the node (运动基元)
   int getPrim() const { return prim; }
   /// determine whether the node is open
   bool isOpen() const { return o; }
@@ -74,12 +74,12 @@ class Node3D {
   /// set a pointer to the predecessor of the node
   void setPred(const Node3D* pred) { this->pred = pred; }
 
-  // UPDATE METHODS
+  // UPoDATE METHODS
   /// Updates the cost-so-far for the node x' coming from its predecessor. It also discovers the node.
   void updateG();
 
   // CUSTOM OPERATORS
-  /// Custom operator to compare nodes. Nodes are equal if their x and y position as well as heading is similar.
+  /// Custom operator to compare ndes. Nodes are equal if their x and y position as well as heading is similar.
   bool operator == (const Node3D& rhs) const;
 
   // RANGE CHECKING
